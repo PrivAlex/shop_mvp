@@ -14,3 +14,12 @@ Route::get('/orders', [OrderController::class, 'index']);
 
 Route::post('/order/{product}', [OrderController::class, 'placeOrder'])->name('order.place');
 
+Route::prefix('admin')->group(function () {
+    Route::get('/', function () {
+        return view('admin.dashboard');
+    })->name('admin.dashboard');
+
+    Route::get('/products', function () {
+        return view('admin.products.index');
+    })->name('admin.products.index');
+});

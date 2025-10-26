@@ -309,12 +309,26 @@ return [
             'type' => 'fullscreen-widget',
             'topnav_right' => true,
         ],
+        [
+            'text' => 'Товары',
+            'url'  => 'admin/products',
+            'icon' => 'fas fa-boxes',
+        ],
 
         // Sidebar items:
+        ['header' => 'Основное'],
         [
-            'type' => 'sidebar-menu-search',
-            'text' => 'search',
+            'text' => 'Dashboard',
+            'url'  => 'admin',
+            'icon' => 'fas fa-tachometer-alt',
         ],
+        [
+            'text' => 'Товары',
+            'url'  => 'admin/products',
+            'icon' => 'fas fa-boxes',
+        ],
+
+
         [
             'text' => 'blog',
             'url' => 'admin/blog',
@@ -327,6 +341,7 @@ return [
             'label' => 4,
             'label_color' => 'success',
         ],
+
         ['header' => 'account_settings'],
         [
             'text' => 'profile',

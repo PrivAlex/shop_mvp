@@ -23,3 +23,7 @@ Route::prefix('admin')->group(function () {
         return view('admin.products.index');
     })->name('admin.products.index');
 });
+
+Route::prefix('admin')->name('admin.')->group(function() {
+    Route::resource('products', ProductController::class);
+});
